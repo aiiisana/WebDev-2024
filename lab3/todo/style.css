@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: cornsilk;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 70px 100px;
+  width: auto;
+}
+
+.todo {
+  width: auto;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+h1 {
+  text-decoration: solid;
+  font-size: 50px;
+}
+
+input[type="text"] {
+  width: 220px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 8px 20px;
+  border: 1px solid rgb(182, 192, 46);
+  border-radius: 4px;
+}
+
+.addButton {
+  padding: 8px 20px;
+  background-color: #fbe752;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 10px;
+}
+
+.addButton:hover {
+  color: darkgoldenrod;
+  background-color: #f0de5b;
+}
+
+.deleteButton {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.deleteButton img {
+  width: 20px;
+}
+
+.deleteButton:hover {
+  opacity: 0.7;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  margin-top: 5px;
+  padding: 12px;
+  background-color: khaki;
+  font-size: 15px;
+  border-radius: 10px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
