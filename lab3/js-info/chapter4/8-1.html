@@ -7,14 +7,15 @@
   </head>
   <body>
     <script>
-      function getLocalDay(date) {
-        let day = date.getDay();
-        if (day == 0) day = 7;
-        return day;
-      }
+      let messages = [
+        { text: "Hello", from: "John" },
+        { text: "How goes?", from: "John" },
+        { text: "See you soon", from: "Alice" },
+      ];
 
-      let date = new Date(2012, 0, 3);
-      alert(getLocalDay(date));
+      let read = new WeakSet();
+
+      read.add(messages[0]);
     </script>
   </body>
 </html>
