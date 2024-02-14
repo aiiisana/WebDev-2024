@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function truncate(str, num) {
+        return str.length > num ? str.slice(0, num - 1) + "..." : str;
+      }
+
+      alert(truncate("What I'd like to tell on this topic is:", 20));
+
+      alert(truncate("Hi everyone!", 20));
+    </script>
+  </body>
+</html>
