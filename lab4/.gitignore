@@ -4,6 +4,4 @@ node_modules/
 
 !src/assets/shipping.json
 
-*.stackblitzrc
-
 .angular/
