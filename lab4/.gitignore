@@ -2,4 +2,6 @@ node_modules/
 
 lab4/*.json
 
+lab4/src/*.json
+
 .angular/
