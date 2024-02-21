@@ -13,8 +13,8 @@
     </h3>
     <h4>{{ product.price | currency }}</h4>
     <p>{{ product.description }}</p>
-    <p *ngIf="product.rating">Rating: {{ product.rating }} <a class="button fancy-button">
-        <em class="material-icons">star</em>
-    </a></p>
+    <p *ngIf="product.rating" id="rating-score">Rating: {{ product.rating }}
+        <em class="material-icons" id = 'star'>star</em>
+    </p>
     <button type="button" (click)="addToCart(product)">Buy</button>
 </div>

@@ -146,6 +146,10 @@ img{
   /*max-width: 200px;*/
 }
 
+#star{
+  /*padding: 10px 0 0 10px;*/
+  font-size: 14px;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
