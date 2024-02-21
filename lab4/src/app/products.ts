@@ -3,8 +3,8 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  imageURL?: string;
-  kaspiLink?: string;
+  imageURL: string;
+  kaspiLink: string;
   rating: number;
 }
 
