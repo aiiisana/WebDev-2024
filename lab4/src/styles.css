@@ -139,11 +139,9 @@ app-top-bar h1 {
 }
 
 img{
-  width: auto;
-  height: 150px;
-  margin-top: 50px;
-  margin-left: 30px;
-  /*max-width: 200px;*/
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 70px;
 }
 
 #star{
