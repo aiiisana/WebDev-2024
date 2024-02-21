@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
     const productIdFromRoute = Number(routeParams.get('productId'));
 
     this.product = products.find(
-      (product) => product.id === productIdFromRoute
+        (product) => product.id === productIdFromRoute
     );
   }
 

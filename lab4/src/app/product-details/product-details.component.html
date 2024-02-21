@@ -1,8 +1,20 @@
 <h2>Product Details</h2>
 
 <div *ngIf="product">
-  <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
-  <button type="button" (click)="addToCart(product)">Buy</button>
+    <img [src]="product.imageURL" alt = {{product.name}}>
+    <h3><a
+            [href]="product.kaspiLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            [title]="product.name + ' on Kaspi.kz'"
+    >
+        {{ product.name }}
+    </a>
+    </h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+    <p *ngIf="product.rating">Rating: {{ product.rating }} <a class="button fancy-button">
+        <em class="material-icons">star</em>
+    </a></p>
+    <button type="button" (click)="addToCart(product)">Buy</button>
 </div>
