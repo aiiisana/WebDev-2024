@@ -1,7 +1,7 @@
 node_modules/
 
-lab4/*.json
+src/*.json
 
-lab4/**/*.json
+.stackblitzrc
 
 .angular/
