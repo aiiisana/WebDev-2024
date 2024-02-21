@@ -2,6 +2,6 @@ node_modules/
 
 lab4/*.json
 
-lab4/src/*.json
+lab4/**/*.json
 
 .angular/
