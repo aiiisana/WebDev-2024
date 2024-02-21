@@ -1,7 +1,9 @@
 node_modules/
 
-src/*.json
+*.json
 
-.stackblitzrc
+!src/assets/shipping.json
+
+*.stackblitzrc
 
 .angular/
