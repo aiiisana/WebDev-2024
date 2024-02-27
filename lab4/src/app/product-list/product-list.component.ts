@@ -18,6 +18,7 @@ export class ProductListComponent {
       window.location.href = whatsappUrl;
       window.alert('The product has been shared!');
     } else {
+      window.alert('The product will be shared via Telegram')
       const message = `Посмотрите на этот товар: ${product.name} \n ${product.kaspiLink}`;
       const telegramUrl = `https://t.me/share/url?url=${product.kaspiLink}&text=Посмотрите на этот товар: ${product.name}`;
 
