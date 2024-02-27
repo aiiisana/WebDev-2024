@@ -170,3 +170,14 @@ img {
 .shipping-prices {
   color: cornflowerblue;
 }
+
+.category-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 30px 300px;
+}
+
+.category-buttons button {
+  width: auto;
+}

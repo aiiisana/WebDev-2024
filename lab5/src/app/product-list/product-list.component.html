@@ -1,24 +1,19 @@
 <h2>Products</h2>
 
+<div class="category-buttons">
+  <button (click)="selectCategory('')">Show All</button>
+  <button (click)="selectCategory('Phones')">Phones</button>
+  <button (click)="selectCategory('Headphones')">Headphones</button>
+  <button (click)="selectCategory('Accessories')">Accessories</button>
+  <button (click)="selectCategory('Laptops and Tablets')">
+    Laptops and Tablets
+  </button>
+</div>
+
 <div class="product-list">
-  <div class="product-item" *ngFor="let product of products">
-    <img [src]="product.imageURL" alt="{{ product.name }}" appResizeImage />
-    <h3>
-      <a
-        [title]="product.name + ' details'"
-        [routerLink]="['/products', product.id]"
-      >
-        {{ product.name }}
-      </a>
-    </h3>
-
-    <p *ngIf="product.description">{{ product.description }}</p>
-
-    <button class="share-button" type="button" (click)="share(product)">
-      Share
-    </button>
-
-    <app-product-alerts [product]="product" (notify)="onNotify()">
-    </app-product-alerts>
-  </div>
+  <app-product-item
+    *ngFor="let product of filterProducts(selectedCategory)"
+    [product]="product"
+    class="product-item"
+  ></app-product-item>
 </div>
