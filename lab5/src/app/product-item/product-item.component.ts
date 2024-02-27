@@ -10,6 +10,8 @@ import { ProductListComponent } from "../product-list/product-list.component";
 })
 export class ProductItemComponent {
   @Input() product!: Product;
+  likeCnt: number = 0;
+
   share(product: Product) {
     const choice = window.prompt(
       "Do you want to share via WhatsApp? (yes/no)",
@@ -32,5 +34,9 @@ export class ProductItemComponent {
 
   onNotify() {
     window.alert("You will be notified when the product goes on sale.");
+  }
+
+  increaseLikeCnt() {
+    this.likeCnt += 1;
   }
 }

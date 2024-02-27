@@ -9,9 +9,20 @@
     </a>
   </h3>
   <p *ngIf="product.description">{{ product.description }}</p>
-  <button type="button" (click)="share(product)">Share</button>
-  <app-product-alerts
-    [product]="product"
-    (notify)="onNotify()"
-  ></app-product-alerts>
+  <div class="diff-buttons">
+    <div class="share-and-notify-buttons">
+      <button type="button" (click)="share(product)">Share</button>
+      <app-product-alerts
+        [product]="product"
+        (notify)="onNotify()"
+        class="notifyBtn"
+      ></app-product-alerts>
+    </div>
+    <div class="likes-count">
+      <button class="likeBtn" (click)="increaseLikeCnt()">
+        <em class="material-icons">thumb_up</em>Like
+      </button>
+      <span id="likeCounter">{{ likeCnt }}</span>
+    </div>
+  </div>
 </div>
