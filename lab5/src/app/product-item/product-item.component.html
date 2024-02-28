@@ -18,6 +18,9 @@
         class="notifyBtn"
       ></app-product-alerts>
     </div>
+    <button class="deleteBtn" (click)="deleteProduct(product)">
+      <em class="material-icons">delete</em>Delete
+    </button>
     <div class="likes-count">
       <button class="likeBtn" (click)="increaseLikeCnt()">
         <em class="material-icons">thumb_up</em>Like

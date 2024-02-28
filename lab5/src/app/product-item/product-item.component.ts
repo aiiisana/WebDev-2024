@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 import { Product, products } from "../products";
 import { ProductListComponent } from "../product-list/product-list.component";
@@ -11,6 +11,7 @@ import { ProductListComponent } from "../product-list/product-list.component";
 export class ProductItemComponent {
   @Input() product!: Product;
   likeCnt: number = 0;
+  @Output() deleteProductEvent = new EventEmitter<Product>();
 
   share(product: Product) {
     const choice = window.prompt(
@@ -38,5 +39,9 @@ export class ProductItemComponent {
 
   increaseLikeCnt() {
     this.likeCnt += 1;
+  }
+
+  deleteProduct(product: Product) {
+    this.deleteProductEvent.emit(product);
   }
 }

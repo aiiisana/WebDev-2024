@@ -26,4 +26,11 @@ export class ProductListComponent {
 
     return this.products.filter((product) => product.category === category);
   }
+
+  deleteProduct(product: Product) {
+    const index = this.products.indexOf(product);
+    if (index !== -1) {
+      this.products.splice(index, 1);
+    }
+  }
 }

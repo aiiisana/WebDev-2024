@@ -14,6 +14,7 @@
   <app-product-item
     *ngFor="let product of filterProducts(selectedCategory)"
     [product]="product"
+    (deleteProductEvent)="deleteProduct($event)"
     class="product-item"
   ></app-product-item>
 </div>
