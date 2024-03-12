@@ -31,10 +31,10 @@ export class AlbumsComponent implements OnInit {
     this.loaded = true;
   }
 
-  // deletePost(id: number) {
-  //   this.albums = this.albums.filter((a) => a.id !== id);
-  //   this.albumService.deleteAlbum(id).subscribe(() => {
-  //     console.log('deleted album sucessfully');
-  //   });
-  // }
+  delete(id: number) {
+    this.albums = this.albums.filter((a) => a.id !== id);
+    this.albumService.deleteAlbum(id).subscribe(() => {
+      console.log('deleted album sucessfully');
+    });
+  }
 }

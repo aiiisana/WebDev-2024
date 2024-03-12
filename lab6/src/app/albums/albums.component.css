@@ -15,3 +15,9 @@ a:hover {
   cursor: pointer;
   color: dodgerblue;
 }
+
+.album-item-container {
+  margin: 40px 80px;
+  border: 1px solid black;
+  padding: 15px;
+}

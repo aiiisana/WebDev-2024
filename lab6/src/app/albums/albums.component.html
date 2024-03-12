@@ -6,11 +6,11 @@
       <a [routerLink]="['/albums', album.id]"
         >{{ album.id }}) {{ album.title }}</a
       >
-      <!-- <button (click)="deletePost(album.id)">x</button> -->
+      <button (click)="delete(album.id)">x</button>
     </div>
   </div>
 </ul>
 
 <ng-template #loading>
-  <p>Posts are loading...</p>
+  <p>Albums are loading</p>
 </ng-template>
