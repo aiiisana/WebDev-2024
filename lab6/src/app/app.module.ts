@@ -8,6 +8,7 @@ import { AlbumsComponent } from './albums/albums.component';
 import { AlbumsDetailsComponent } from './albums-details/albums-details.component';
 import { AlbumsPhotosComponent } from './albums-photos/albums-photos.component';
 import { routes } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { routes } from './app.routes';
     AlbumsDetailsComponent,
     AlbumsPhotosComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

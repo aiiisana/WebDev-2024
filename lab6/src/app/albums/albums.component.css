@@ -1,0 +1,17 @@
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  margin: 40px 80px;
+  font-size: 17px;
+  color: rgb(14, 21, 33);
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: dodgerblue;
+}

@@ -16,6 +16,7 @@
   background-color: transparent;
   cursor: pointer;
   margin: 0 50px;
+  font-weight: bolder;
 }
 
 .navigation-menu button:hover {

@@ -1,1 +1,16 @@
-<p>albums works!</p>
+<h2>Albums</h2>
+
+<ul *ngIf="loaded; else loading">
+  <div class="album-holder">
+    <div *ngFor="let album of albums">
+      <a [routerLink]="['/albums', album.id]"
+        >{{ album.id }}) {{ album.title }}</a
+      >
+      <!-- <button (click)="deletePost(album.id)">x</button> -->
+    </div>
+  </div>
+</ul>
+
+<ng-template #loading>
+  <p>Posts are loading...</p>
+</ng-template>
