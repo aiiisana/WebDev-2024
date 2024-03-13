@@ -4,7 +4,7 @@
 
 <ul *ngIf="loaded; else loading">
   <div class="album-holder">
-    <div *ngFor="let album of albums">
+    <div *ngFor="let album of albums" class="album-item-holder">
       <a routerLink="['/albums', album.id]"
         >{{ album.id }}) {{ album.title }}</a
       >

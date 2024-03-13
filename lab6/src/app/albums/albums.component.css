@@ -16,8 +16,11 @@ a:hover {
   color: dodgerblue;
 }
 
-.album-item-container {
+.album-item-holder {
   margin: 40px 80px;
+
   border: 1px solid black;
   padding: 15px;
+  display: flex;
+  justify-content: space-between;
 }
