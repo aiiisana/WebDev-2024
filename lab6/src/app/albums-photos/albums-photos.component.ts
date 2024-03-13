@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotosInterface } from '../../modules/photos';
+import { PhotosInterface } from '../../models/photos';
 import { AlbumService } from '../album.service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,23 +11,23 @@ import { CommonModule } from '@angular/common';
   templateUrl: './albums-photos.component.html',
   styleUrl: './albums-photos.component.css',
 })
-export class AlbumsPhotosComponent implements OnInit {
+export class AlbumsPhotosComponent {
   photos!: PhotosInterface[];
   loaded: boolean = false;
-  constructor(
-    private route: ActivatedRoute,
-    private albumService: AlbumService
-  ) {}
-  ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      if (params.get('id')) {
-        const id = Number(params.get('id'));
-        this.loaded = false;
-        this.albumService.getPhotos(id).subscribe((photos) => {
-          this.photos = photos;
-          this.loaded = true;
-        });
-      }
-    });
-  }
+
+  constructor() // private albumService: AlbumService, // private route: ActivatedRoute,
+  {}
+
+  // ngOnInit(): void {
+  //   this.route.paramMap.subscribe((params) => {
+  //     if (params.get('id')) {
+  //       const id = Number(params.get('id'));
+  //       this.loaded = false;
+  //       this.albumService.getPhotos(id).subscribe((photos) => {
+  //         this.photos = photos;
+  //         this.loaded = true;
+  //       });
+  //     }
+  //   });
+  // }
 }

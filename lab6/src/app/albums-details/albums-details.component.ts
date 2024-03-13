@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import { Album } from '../../modules/album';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { Album } from '../../models/album';
 import { FormsModule } from '@angular/forms';
 import { AlbumService } from '../album.service';
 
@@ -18,34 +18,34 @@ export class AlbumsDetailsComponent {
   title: string = '';
   loading: boolean = false;
 
-  constructor(
-    private route: ActivatedRoute,
-    private albumService: AlbumService
-  ) {}
+  // constructor(
+  //   private route: ActivatedRoute,
+  //   private albumService: AlbumService
+  // ) {}
 
-  ngOnInit() {
-    this.route.paramMap.subscribe((params) => {
-      if (params.get('id')) {
-        const postId = Number(params.get('id'));
-        this.loaded = false;
-        this.albumService.getAlbum(postId).subscribe((album) => {
-          this.album = album;
-          this.loaded = true;
-        });
-      }
-    });
-  }
-  changeTitle() {
-    if (this.title !== '') {
-      this.loading = true;
-      this.albumService
-        .updateAlbum(this.album.id, `{"title":"${this.title}"}`)
-        .subscribe(() => {
-          console.log('updated');
-          this.album.title = this.title;
-          this.title = '';
-          this.loading = false;
-        });
-    }
-  }
+  // ngOnInit() {
+  //   this.route.paramMap.subscribe((params) => {
+  //     if (params.get('id')) {
+  //       const postId = Number(params.get('id'));
+  //       this.loaded = false;
+  //       this.albumService.getAlbum(postId).subscribe((album) => {
+  //         this.album = album;
+  //         this.loaded = true;
+  //       });
+  //     }
+  //   });
+  // }
+  // changeTitle() {
+  //   if (this.title !== '') {
+  //     this.loading = true;
+  //     this.albumService
+  //       .updateAlbum(this.album.id, `{"title":"${this.title}"}`)
+  //       .subscribe(() => {
+  //         console.log('updated');
+  //         this.album.title = this.title;
+  //         this.title = '';
+  //         this.loading = false;
+  //       });
+  //   }
+  // }
 }

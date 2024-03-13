@@ -1,12 +1,14 @@
 <h2>Albums</h2>
 
+<a routerLink="/home" class="goBackLink">Go back</a>
+
 <ul *ngIf="loaded; else loading">
   <div class="album-holder">
     <div *ngFor="let album of albums">
-      <a [routerLink]="['/albums', album.id]"
+      <a routerLink="['/albums', album.id]"
         >{{ album.id }}) {{ album.title }}</a
       >
-      <button (click)="delete(album.id)">x</button>
+      <button (click)="delete(album.id)">DELETE</button>
     </div>
   </div>
 </ul>
