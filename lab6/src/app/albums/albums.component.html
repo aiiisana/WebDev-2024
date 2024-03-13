@@ -2,7 +2,7 @@
 
 <a routerLink="/home" class="goBackLink">Go back</a>
 
-<ul *ngIf="loaded; else loading">
+<ul>
   <div class="album-holder">
     <div *ngFor="let album of albums" class="album-item-holder">
       <a [routerLink]="['/albums', album.id]"
@@ -12,7 +12,3 @@
     </div>
   </div>
 </ul>
-
-<ng-template #loading>
-  <p>Albums are loading</p>
-</ng-template>

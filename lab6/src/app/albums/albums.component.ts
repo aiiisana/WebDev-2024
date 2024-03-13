@@ -14,18 +14,12 @@ import { CommonModule } from '@angular/common';
 })
 export class AlbumsComponent implements OnInit {
   albums: Album[] = [];
-  loaded: boolean = false;
 
   constructor(private router: Router, private albumService: AlbumService) {}
 
   ngOnInit() {
-    this.showAlbums();
-  }
-
-  showAlbums() {
     this.albumService.getAlbums().subscribe((data) => {
       this.albums = data as Album[];
-      this.loaded = true;
     });
   }
 
