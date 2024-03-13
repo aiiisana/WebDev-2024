@@ -1,6 +1,6 @@
 <a routerLink="../" class="goBackLink">Go back</a>
 <div class="holder">
-  <div *ngFor="let photo of photos">
+  <div *ngFor="let photo of photos" class="photo-container">
     <p>{{ photo.title }}</p>
     <img src="{{ photo.thumbnailUrl }}" />
   </div>

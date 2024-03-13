@@ -1,0 +1,7 @@
+.photo-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 40px;
+  border: 1px solid rgb(156, 117, 117);
+}

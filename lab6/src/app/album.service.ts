@@ -35,10 +35,10 @@ export class AlbumService {
     );
   }
 
-  // updateAlbum(id: number, newTitle: string) {
-  //   return this.http.patch(
-  //     `https://jsonplaceholder.typicode.com/albums/${id}`,
-  //     `{"title":"${newTitle}"}`
-  //   );
-  // }
+  updateAlbum(id: number, newTitle: string) {
+    return this.http.patch(
+      `https://jsonplaceholder.typicode.com/albums/${id}`,
+      `{"title":"${newTitle}"}`
+    );
+  }
 }

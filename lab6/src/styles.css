@@ -1,3 +1,21 @@
 body {
   background-color: rgb(252, 243, 243);
 }
+
+.goBackLink {
+  font-weight: bolder;
+  text-decoration: none;
+  margin: 50px;
+  padding: 10px;
+  font-size: 22px;
+  color: black;
+}
+
+.goBackLink:active {
+  color: black;
+}
+
+.goBackLink:hover {
+  text-decoration: underline;
+  color: blue;
+}

@@ -1,0 +1,32 @@
+.album-details-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.additional-album-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.new-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.new-title-container button {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bolder;
+  margin: 40px 0;
+}
+
+.new-title-container button:hover {
+  color: blue;
+}

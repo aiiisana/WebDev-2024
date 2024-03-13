@@ -1,7 +1,18 @@
-<h2>Album Details</h2>
+<div class="additional-album-details">
+  <h1>Album Details</h1>
+  <a routerLink="../" class="goBackLink">Go back</a>
+</div>
 
-<a routerLink="../" class="goBackLink">Go back</a>
+<div class="album-details-container">
+  <h2>ID: {{ album.id }}</h2>
+  <h2>User ID: {{ album.userId }}</h2>
+  <br />
+  <h3>{{ album?.title }}</h3>
 
-<h2>ID: {{ album.id }}</h2>
+  <div class="new-title-container">
+    <input type="text" [(ngModel)]="title" />
+    <button (click)="changeTitle()" class="titleChangeBtn">Save</button>
+  </div>
 
-<h3><a routerLink="photos">Photos</a></h3>
+  <h3><a routerLink="photos" class="goBackLink">Photos</a></h3>
+</div>
