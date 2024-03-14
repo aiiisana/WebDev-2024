@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { AlbumService } from './album.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { ErrorComponent } from './error/error.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ export const routes: Routes = [
   { path: 'albums/:id', component: AlbumsDetailsComponent },
   { path: 'albums/:id/photos', component: AlbumsPhotosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: ErrorComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes), HttpClientModule, CommonModule],
