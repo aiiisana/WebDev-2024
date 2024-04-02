@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 
-from lab8.shopback.api.views import get_categories, get_category, get_product, get_products, get_products_by_category 
+from api.views import get_categories, get_category, get_product, get_products, get_products_by_category 
 
 urlpatterns = [
     path('categories/', get_categories),
