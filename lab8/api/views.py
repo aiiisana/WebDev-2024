@@ -25,7 +25,7 @@ def get_category(request, pk=None):
 
 def get_products(request):
     products = Product.objects.all()
-    products_json = [p.to_json() for p in products]
+    products_json = [product.to_json() for product in products]
     return JsonResponse(products_json, safe=False)
 
 
@@ -39,12 +39,12 @@ def get_product(request, pk=None):
         }, status=404)
 
 
-def get_products_by_category(request, cat_id=None):
+def get_products_by_category(request, categ_id=None):
     try:
-        category = Category.objects.get(id=cat_id)
+        category = Category.objects.get(id=categ_id)
     except Category.DoesNotExist as e:
         return JsonResponse({'error': str(e)}, status=404)
 
-    products = Product.objects.filter(category_id=cat_id)
-    products_json = [p.to_json() for p in products]
+    products = Product.objects.filter(category_id=categ_id)
+    products_json = [product.to_json() for product in products]
     return JsonResponse(products_json, safe=False)
