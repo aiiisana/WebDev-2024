@@ -6,6 +6,6 @@ urlpatterns = [
     path('categories/<int:pk>/', get_category),
     path('products/', get_products),
     path('products/<int:pk>/', get_product),
-    path('categories/<int:cat_id>/products/', get_products_by_category),
+    path('categories/<int:categ_id>/products/', get_products_by_category),
     path('', get_epmty_page)
 ]
