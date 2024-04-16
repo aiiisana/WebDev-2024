@@ -1,3 +1,9 @@
 <div class="container">
-  <router-outlet> </router-outlet>
+  <router-outlet>
+    <div class="navigation-menu">
+      <button (click)="goToHome()">Home</button>
+      <button (click)="goToCompanies()">Companies</button>
+      <button (click)="goToVacancies()">Vacancies</button>
+    </div>
+  </router-outlet>
 </div>

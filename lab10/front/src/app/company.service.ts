@@ -18,6 +18,4 @@ export class CompanyService {
   getCompany(id: number): Observable<Company> {
     return this.http.get<Company>(`${this.apiUrl}${id}/`);
   }
-
-  // You can implement more methods as needed
 }

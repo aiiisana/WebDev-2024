@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'front';
+  constructor(private router: Router) {}
+
+  goToHome() {
+    return this.router.navigateByUrl('/home');
+  }
+
+  goToAbout() {
+    return this.router.navigateByUrl('/about');
+  }
+
+  goToCompanies() {
+    return this.router.navigateByUrl('/companies');
+  }
+
+  goToVacancies() {
+    return this.router.navigateByUrl('/vacancies');
+  }
 }

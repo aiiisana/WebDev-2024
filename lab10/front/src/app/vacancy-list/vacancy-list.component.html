@@ -1,1 +1,8 @@
-<p>vacancy-list works!</p>
+<h2>Vacancies</h2>
+
+<div *ngFor="let vacancy of vacancies" class="vacancy-holder">
+  <h3>{{ vacancy.name }}</h3>
+  <p>{{ vacancy.description }}</p>
+  <p>Salary: {{ vacancy.salary }}</p>
+  <p>{{ vacancy.company.id }}</p>
+</div>

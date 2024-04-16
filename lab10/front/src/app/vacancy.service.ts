@@ -7,7 +7,13 @@ import { Vacancy } from './interfaces/vacancy';
   providedIn: 'root',
 })
 export class VacancyService {
+  private apiUrl = 'http://127.0.0.1:8000/api/vacancies/';
+
   constructor(private http: HttpClient) {}
+
+  getVacancies(): Observable<Vacancy[]> {
+    return this.http.get<Vacancy[]>(this.apiUrl);
+  }
 
   getVacanciesByCompany(companyId: number): Observable<Vacancy[]> {
     return this.http.get<Vacancy[]>(

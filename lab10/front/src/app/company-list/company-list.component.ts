@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../interfaces/company';
 import { CompanyService } from '../company.service';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-company-list',
+  standalone: true,
+  imports: [RouterModule, CommonModule],
   templateUrl: './company-list.component.html',
   styleUrls: ['./company-list.component.css'],
 })
@@ -12,13 +16,11 @@ export class CompanyListComponent implements OnInit {
 
   constructor(private companyService: CompanyService) {}
 
-  ngOnInit(): void {
-    this.getCompanies();
+  ngOnInit() {
+    this.companyService.getCompanies().subscribe((data) => {
+      this.companies = data as Company[];
+    });
   }
 
-  getCompanies(): void {
-    this.companyService
-      .getCompanies()
-      .subscribe((companies) => (this.companies = companies));
-  }
+  showVacancies() {}
 }
