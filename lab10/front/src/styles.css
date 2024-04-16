@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+.vacancy-holder {
+  border: 1px solid rgb(206, 203, 203);
+  font-size: 20px;
+  padding: 20px 50px;
+  margin: 10px;
+}
+
+a {
+  font-weight: bolder;
+  text-decoration: none;
+  margin: 50px;
+  padding: 10px;
+  font-size: 22px;
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}

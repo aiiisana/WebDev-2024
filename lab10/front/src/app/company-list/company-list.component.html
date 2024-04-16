@@ -1,8 +1,9 @@
-<div *ngFor="let company of companies" class="company-holder">
-  <!-- <div (click)="showVacancies(company.id)"> -->
+<div
+  *ngFor="let company of companies"
+  class="company-holder"
+  (click)="viewCompanyDetails(company.id)"
+>
   <h3>{{ company.name }}</h3>
-  <p>{{ company.description }}</p>
-  <p>{{ company.city }}</p>
-  <p>{{ company.address }}</p>
-  <!-- </div> -->
+  <p>City: {{ company.city }}</p>
+  <p>Address: {{ company.address }}</p>
 </div>

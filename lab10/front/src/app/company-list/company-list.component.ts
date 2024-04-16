@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Company } from '../interfaces/company';
 import { CompanyService } from '../company.service';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class CompanyListComponent implements OnInit {
   companies: Company[] = [];
 
-  constructor(private companyService: CompanyService) {}
+  constructor(private companyService: CompanyService, private router: Router) {}
 
   ngOnInit() {
     this.companyService.getCompanies().subscribe((data) => {
@@ -23,4 +23,7 @@ export class CompanyListComponent implements OnInit {
   }
 
   showVacancies() {}
+  viewCompanyDetails(companyId: number): void {
+    this.router.navigate(['/companies', companyId]);
+  }
 }

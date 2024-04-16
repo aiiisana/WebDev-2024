@@ -1,0 +1,10 @@
+<h2>Vacancy detail</h2>
+
+<div>
+  <p><strong>Name:</strong>{{ vacancy.name }}</p>
+  <p><strong>Description:</strong> {{ vacancy.description }}</p>
+  <p><strong>Salary:</strong> Salary: {{ vacancy.salary }}</p>
+  <a [routerLink]="['../../companies', vacancy.company]"
+    ><strong>Go to Company Page</strong></a
+  >
+</div>
