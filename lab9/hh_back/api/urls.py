@@ -1,5 +1,5 @@
 from django.urls import path
-from api.views import get_all_companies, get_all_vacancies, get_company, get_error_page, get_top_ten_vacancies, get_vacancies_by_company, get_vacancy
+from api.views import get_all_companies, get_all_vacancies, get_company, get_top_ten_vacancies, get_vacancies_by_company, get_vacancy
 
 urlpatterns = [
     path('companies/', get_all_companies),
