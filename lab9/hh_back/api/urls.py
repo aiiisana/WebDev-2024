@@ -8,5 +8,4 @@ urlpatterns = [
     path('vacancies/', get_all_vacancies),
     path('vacancies/<int:pk>/', get_vacancy),
     path('vacancies/top_ten/', get_top_ten_vacancies),
-    # path('<path:unknown_path>', get_error_page),
 ]
